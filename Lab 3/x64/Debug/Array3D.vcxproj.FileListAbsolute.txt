@@ -1,0 +1,2 @@
+D:\Programs\C++\Array3D\x64\Debug\Array3D.exe
+D:\Programs\GitKraken\-\Lab 3\x64\Debug\Array3D.exe
