@@ -1,0 +1,30 @@
+﻿  Keyboard.cpp
+D:\Programs\C++\Keyboard\Keyboard.cpp(1,4): error C2014: команда препроцессора не должна начинаться с пробела
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,1): error C2144: синтаксическая ошибка: перед "int" требуется ";"
+  (компиляция исходного файла "Keyboard.cpp")
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  (компиляция исходного файла "Keyboard.cpp")
+  
+D:\Programs\C++\Keyboard\Keyboard.cpp(34,18): error C2039: "cout": не является членом "std".
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\thread(37,1):
+   см. объявление "std"
+  
+D:\Programs\C++\Keyboard\Keyboard.cpp(34,18): error C2065: cout: необъявленный идентификатор
+D:\Programs\C++\Keyboard\Keyboard.cpp(34,93): error C2039: "endl": не является членом "std".
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\thread(37,1):
+   см. объявление "std"
+  
+D:\Programs\C++\Keyboard\Keyboard.cpp(34,93): error C2065: endl: необъявленный идентификатор
+D:\Programs\C++\Keyboard\Keyboard.cpp(43,18): error C2039: "cout": не является членом "std".
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\thread(37,1):
+   см. объявление "std"
+  
+D:\Programs\C++\Keyboard\Keyboard.cpp(43,18): error C2065: cout: необъявленный идентификатор
+D:\Programs\C++\Keyboard\Keyboard.cpp(43,91): error C2039: "endl": не является членом "std".
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\thread(37,1):
+   см. объявление "std"
+  
+D:\Programs\C++\Keyboard\Keyboard.cpp(43,91): error C2065: endl: необъявленный идентификатор
+D:\Programs\C++\Keyboard\Keyboard.cpp(54,15): error C2065: LC_ALL: необъявленный идентификатор
+D:\Programs\C++\Keyboard\Keyboard.cpp(54,5): error C3861: setlocale: идентификатор не найден
