@@ -1,1 +1,2 @@
 D:\Programs\C++\Fabric\x64\Debug\Fabric.exe
+D:\Programs\GitKraken\-\Lab 6\x64\Debug\Fabric.exe

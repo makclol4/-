@@ -15,10 +15,10 @@ public:
 
 // Подклассы контролов
 // наследуются от Control и переопределяют его виртуальные методы
-class Form : public Control {
+class winForm : public Control {
 public:
     void addControl(Control* control) {
-        std::cout << "В форму добавлен control" << std::endl;
+        std::cout << "В форму добавлен wincontrol" << std::endl;
     }
 
     // Реализация виртуальных методов
@@ -32,208 +32,457 @@ public:
     }
 };
 
-class Label : public Control {
+class linForm : public Control {
 public:
-    void setText(const std::string& text) {
-        std::cout << "Label текст установлен: " << text << std::endl;
-    }
-
-    std::string getText() {
-        std::cout << "Вызвался Label getText" << std::endl;
-        return "Sample text";
-    }
-
-    void setPosition(int x, int y) override {
-        std::cout << "Вызвался Label setPosition" << std::endl;
-    }
-
-    std::pair<int, int> getPosition() override {
-        std::cout << "Вызвался Label getPosition" << std::endl;
-        return { 0, 0 };
-    }
-};
-
-class TextBox : public Control {
-public:
-    void setText(const std::string& text) {
-        std::cout << "TextBox текст установлен: " << text << std::endl;
-    }
-
-    std::string getText() {
-        std::cout << "Вызвался TextBox getText" << std::endl;
-        return "Sample text";
-    }
-
-    void OnValueChanged() {
-        std::cout << "Значение TextBox изменилось" << std::endl;
+    void addControl(Control* control) {
+        std::cout << "В форму добавлен lincontrol" << std::endl;
     }
 
     // Реализация виртуальных методов
     void setPosition(int x, int y) override {
-        std::cout << "Вызвался TextBox setPosition" << std::endl;
+        std::cout << "Вызвался setPosition" << std::endl;
     }
 
     std::pair<int, int> getPosition() override {
-        std::cout << "Вызвался TextBox getPosition" << std::endl;
+        std::cout << "Вызвался getPosition" << std::endl;
         return { 0, 0 };
     }
 };
 
-class ComboBox : public Control {
+class macForm : public Control {
+public:
+    void addControl(Control* control) {
+        std::cout << "В форму добавлен maccontrol" << std::endl;
+    }
+
+    // Реализация виртуальных методов
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class winLabel : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "winLabel текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался winLabel getText" << std::endl;
+        return "Sample text";
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался winLabel setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался winLabel getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class linLabel : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "linLabel текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался linLabel getText" << std::endl;
+        return "Sample text";
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался linLabel setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался linLabel getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class macLabel : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "macLabel текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался macLabel getText" << std::endl;
+        return "Sample text";
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался macLabel setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался macLabel getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class winTextBox : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "winTextBox текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался winTextBox getText" << std::endl;
+        return "Sample text";
+    }
+
+    void OnValueChanged() {
+        std::cout << "Значение winTextBox изменилось" << std::endl;
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался winTextBox setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался winTextBox getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class linTextBox : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "linTextBox текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался linTextBox getText" << std::endl;
+        return "Sample text";
+    }
+
+    void OnValueChanged() {
+        std::cout << "Значение linTextBox изменилось" << std::endl;
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался linTextBox setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался linTextBox getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class macTextBox : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "macTextBox текст установлен: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался macTextBox getText" << std::endl;
+        return "Sample text";
+    }
+
+    void OnValueChanged() {
+        std::cout << "Значение macTextBox изменилось" << std::endl;
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался macTextBox setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался macTextBox getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class winComboBox : public Control {
 public:
     void setItems(const std::vector<std::string>& items) {
-        std::cout << "Элементы ComboBox установлены: " << std::endl;
+        std::cout << "Элементы winComboBox установлены: " << std::endl;
     }
 
     void setSelectedIndex(int index) {
-        std::cout << "Выбранный индекс в ComboBox selected установлен" << index << std::endl;
+        std::cout << "Выбранный индекс в winComboBox selected установлен" << index << std::endl;
     }
 
     int getSelectedIndex() {
-        std::cout << "ComboBox возвращает выбранный индекс" << std::endl;
+        std::cout << "winComboBox возвращает выбранный индекс" << std::endl;
         return 0;
     }
 
     std::vector<std::string> getItems() {
-        std::cout << "Вызвался ComboBox get items" << std::endl;
+        std::cout << "Вызвался winComboBox get items" << std::endl;
         return { "Item 1", "Item 2" };
     }
 
     void setPosition(int x, int y) override {
-        std::cout << "Вызвался ComboBox setPosition" << std::endl;
+        std::cout << "Вызвался winComboBox setPosition" << std::endl;
     }
 
     std::pair<int, int> getPosition() override {
-        std::cout << "Вызвался ComboBox getPosition" << std::endl;
+        std::cout << "Вызвался winComboBox getPosition" << std::endl;
         return { 0, 0 };
     }
 };
 
-class Button : public Control {
+class linComboBox : public Control {
+public:
+    void setItems(const std::vector<std::string>& items) {
+        std::cout << "Элементы linComboBox установлены: " << std::endl;
+    }
+
+    void setSelectedIndex(int index) {
+        std::cout << "Выбранный индекс в linComboBox selected установлен" << index << std::endl;
+    }
+
+    int getSelectedIndex() {
+        std::cout << "linComboBox возвращает выбранный индекс" << std::endl;
+        return 0;
+    }
+
+    std::vector<std::string> getItems() {
+        std::cout << "Вызвался linComboBox get items" << std::endl;
+        return { "Item 1", "Item 2" };
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался linComboBox setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался linComboBox getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class macComboBox : public Control {
+public:
+    void setItems(const std::vector<std::string>& items) {
+        std::cout << "Элементы macComboBox установлены: " << std::endl;
+    }
+
+    void setSelectedIndex(int index) {
+        std::cout << "Выбранный индекс в macComboBox selected установлен" << index << std::endl;
+    }
+
+    int getSelectedIndex() {
+        std::cout << "macComboBox возвращает выбранный индекс" << std::endl;
+        return 0;
+    }
+
+    std::vector<std::string> getItems() {
+        std::cout << "Вызвался macComboBox get items" << std::endl;
+        return { "Item 1", "Item 2" };
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался macComboBox setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался macComboBox getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class winButton : public Control {
 public:
     void setText(const std::string& text) {
-        std::cout << "Установлен текст Button: " << text << std::endl;
+        std::cout << "Установлен текст winButton: " << text << std::endl;
     }
 
     std::string getText() {
-        std::cout << "Вызвался Button getText" << std::endl;
+        std::cout << "Вызвался winButton getText" << std::endl;
         return "Sample text";
     }
 
     void Click() {
-        std::cout << "Button нажалась" << std::endl;
+        std::cout << "winButton нажалась" << std::endl;
     }
 
     void setPosition(int x, int y) override {
-        std::cout << "Вызвался Button setPosition" << std::endl;
+        std::cout << "Вызвался winButton setPosition" << std::endl;
     }
 
     std::pair<int, int> getPosition() override {
-        std::cout << "Вызвался Button getPosition" << std::endl;
+        std::cout << "Вызвался winButton getPosition" << std::endl;
         return { 0, 0 };
     }
 };
 
-// Абстрактная фабрика
-// определили методы для создания каждого типа контроллера
-class AbstractFactory {
+class linButton : public Control {
 public:
-    virtual Form* createForm() = 0;
-    virtual Label* createLabel() = 0;
-    virtual TextBox* createTextBox() = 0;
-    virtual ComboBox* createComboBox() = 0;
-    virtual Button* createButton() = 0;
-    virtual ~AbstractFactory() {}
+    void setText(const std::string& text) {
+        std::cout << "Установлен текст linButton: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался linButton getText" << std::endl;
+        return "Sample text";
+    }
+
+    void Click() {
+        std::cout << "linButton нажалась" << std::endl;
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался linButton setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался linButton getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class macButton : public Control {
+public:
+    void setText(const std::string& text) {
+        std::cout << "Установлен текст macButton: " << text << std::endl;
+    }
+
+    std::string getText() {
+        std::cout << "Вызвался macButton getText" << std::endl;
+        return "Sample text";
+    }
+
+    void Click() {
+        std::cout << "macButton нажалась" << std::endl;
+    }
+
+    void setPosition(int x, int y) override {
+        std::cout << "Вызвался macButton setPosition" << std::endl;
+    }
+
+    std::pair<int, int> getPosition() override {
+        std::cout << "Вызвался macButton getPosition" << std::endl;
+        return { 0, 0 };
+    }
+};
+
+class winAbstractFactory {
+public:
+    virtual winForm* createForm() = 0;
+    virtual winLabel* createLabel() = 0;
+    virtual winTextBox* createTextBox() = 0;
+    virtual winComboBox* createComboBox() = 0;
+    virtual winButton* createButton() = 0;
+    virtual ~winAbstractFactory() {}
+};
+
+class linAbstractFactory {
+public:
+    virtual linForm* createForm() = 0;
+    virtual linLabel* createLabel() = 0;
+    virtual linTextBox* createTextBox() = 0;
+    virtual linComboBox* createComboBox() = 0;
+    virtual linButton* createButton() = 0;
+    virtual ~linAbstractFactory() {}
+};
+
+class macAbstractFactory {
+public:
+    virtual macForm* createForm() = 0;
+    virtual macLabel* createLabel() = 0;
+    virtual macTextBox* createTextBox() = 0;
+    virtual macComboBox* createComboBox() = 0;
+    virtual macButton* createButton() = 0;
+    virtual ~macAbstractFactory() {}
 };
 
 // Подклассы фабрик для каждой операционной системы
-class WindowsFactory : public AbstractFactory {
+class WindowsFactory : public winAbstractFactory {
 public:
-    Form* createForm() override {
-        return new Form();
+    winForm* createForm() override {
+        return new winForm();
     }
 
-    Label* createLabel() override {
-        return new Label();
+    winLabel* createLabel() override {
+        return new winLabel();
     }
 
-    TextBox* createTextBox() override {
-        return new TextBox();
+    winTextBox* createTextBox() override {
+        return new winTextBox();
     }
 
-    ComboBox* createComboBox() override {
-        return new ComboBox();
+    winComboBox* createComboBox() override {
+        return new winComboBox();
     }
 
-    Button* createButton() override {
-        return new Button();
+    winButton* createButton() override {
+        return new winButton();
     }
 };
 
-class LinuxFactory : public AbstractFactory {
+class LinuxFactory : public linAbstractFactory {
 public:
-    Form* createForm() override {
-        return new Form();
+    linForm* createForm() override {
+        return new linForm();
     }
 
-    Label* createLabel() override {
-        return new Label();
+    linLabel* createLabel() override {
+        return new linLabel();
     }
 
-    TextBox* createTextBox() override {
-        return new TextBox();
+    linTextBox* createTextBox() override {
+        return new linTextBox();
     }
 
-    ComboBox* createComboBox() override {
-        return new ComboBox();
+    linComboBox* createComboBox() override {
+        return new linComboBox();
     }
 
-    Button* createButton() override {
-        return new Button();
+    linButton* createButton() override {
+        return new linButton();
     }
 };
 
-class MacOSFactory : public AbstractFactory {
+class MacOSFactory : public macAbstractFactory {
 public:
-    Form* createForm() override {
-        return new Form();
+    macForm* createForm() override {
+        return new macForm();
     }
 
-    Label* createLabel() override {
-        return new Label();
+    macLabel* createLabel() override {
+        return new macLabel();
     }
 
-    TextBox* createTextBox() override {
-        return new TextBox();
+    macTextBox* createTextBox() override {
+        return new macTextBox();
     }
 
-    ComboBox* createComboBox() override {
-        return new ComboBox();
+    macComboBox* createComboBox() override {
+        return new macComboBox();
     }
 
-    Button* createButton() override {
-        return new Button();
+    macButton* createButton() override {
+        return new macButton();
     }
 };
 
-// использует абстрактную фабрику для создания контроллов и вызова их методов
-class Client {
+class winClient {
 public:
-    // создаем экземпляры всех типов контроллов
-    void run(AbstractFactory* factory) {
-        Form* form = factory->createForm();
-        Label* label = factory->createLabel();
-        TextBox* textBox = factory->createTextBox();
-        ComboBox* comboBox = factory->createComboBox();
-        Button* button = factory->createButton();
+    void run(winAbstractFactory* factory) {
+        winForm* form = factory->createForm();
+        winLabel* label = factory->createLabel();
+        winTextBox* textBox = factory->createTextBox();
+        winComboBox* comboBox = factory->createComboBox();
+        winButton* button = factory->createButton();
 
-        // добавляем их на форму
         form->addControl(label);
         form->addControl(textBox);
         form->addControl(comboBox);
         form->addControl(button);
 
-        // устанавливаем свойства
         label->setText("Hello, world!");
         label->setPosition(10, 10);
 
@@ -246,7 +495,74 @@ public:
         button->setText("Click me!");
         button->setPosition(40, 40);
 
-        // Удаление контролов
+        delete form;
+        delete label;
+        delete textBox;
+        delete comboBox;
+        delete button;
+    }
+};
+
+class linClient {
+public:
+    void run(linAbstractFactory* factory) {
+        linForm* form = factory->createForm();
+        linLabel* label = factory->createLabel();
+        linTextBox* textBox = factory->createTextBox();
+        linComboBox* comboBox = factory->createComboBox();
+        linButton* button = factory->createButton();
+
+        form->addControl(label);
+        form->addControl(textBox);
+        form->addControl(comboBox);
+        form->addControl(button);
+
+        label->setText("Hello, world!");
+        label->setPosition(10, 10);
+
+        textBox->setText("Sample text");
+        textBox->setPosition(20, 20);
+
+        comboBox->setItems({ "Item 1", "Item 2" });
+        comboBox->setPosition(30, 30);
+
+        button->setText("Click me!");
+        button->setPosition(40, 40);
+
+        delete form;
+        delete label;
+        delete textBox;
+        delete comboBox;
+        delete button;
+    }
+};
+
+class macClient {
+public:
+    void run(macAbstractFactory* factory) {
+        macForm* form = factory->createForm();
+        macLabel* label = factory->createLabel();
+        macTextBox* textBox = factory->createTextBox();
+        macComboBox* comboBox = factory->createComboBox();
+        macButton* button = factory->createButton();
+
+        form->addControl(label);
+        form->addControl(textBox);
+        form->addControl(comboBox);
+        form->addControl(button);
+
+        label->setText("Hello, world!");
+        label->setPosition(10, 10);
+
+        textBox->setText("Sample text");
+        textBox->setPosition(20, 20);
+
+        comboBox->setItems({ "Item 1", "Item 2" });
+        comboBox->setPosition(30, 30);
+
+        button->setText("Click me!");
+        button->setPosition(40, 40);
+
         delete form;
         delete label;
         delete textBox;
@@ -257,21 +573,23 @@ public:
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    // Определяем текущую операционную систему
+
 #ifdef _WIN32
     WindowsFactory factory;
+    winClient client;
+    client.run(&factory);
 #elif __linux__
     LinuxFactory factory;
+    linClient client;
+    client.run(&factory);
 #elif __APPLE__
     MacOSFactory factory;
+    macClient client;
+    client.run(&factory);
 #else
     std::cerr << "Unsupported operating system" << std::endl;
     return 1;
 #endif
-
-    // запускаем контроллы, используя соответствующую фабрику
-    Client client;
-    client.run(&factory);
 
     return 0;
 }
