@@ -29,11 +29,6 @@ public:
         }
     }
 
-    void relabelKey(const std::string& key, const std::string& virtualKey)
-    {
-        actions.erase(key);
-        setAction(key, virtualKey);
-    }
 };
 
 class Command
@@ -59,6 +54,13 @@ public:
     }
 };
 
+bool Otkat_action(std::string) {
+    //если произошла отменат действия
+    return true;
+    //else
+    //return false
+}
+
 int main()
 {
     Command copy("c", "ctrl+c");
@@ -76,33 +78,6 @@ int main()
 
     std::string key;
 
-    while (true) {
-        std::cout << "Enter a key or combination: \n";
-        std::getline(std::cin, key);
-
-        if (key == "continue") {
-            break;
-        }
-        if (key == "exit") {
-            return 0;
-        }
-        if (key == "undo") {
-            virtualKeyboard.undoAction();
-        }
-        else {
-            std::cout << "Enter a new key or combination: ";
-            std::string virtualKey;
-            std::getline(std::cin, virtualKey);
-
-            if (key.find('+') != std::string::npos && virtualKey.find('+') != std::string::npos) {
-                Command command(key, virtualKey);
-            }
-            else {
-                virtualKeyboard.setAction(key, virtualKey);
-            }
-        }
-    }
-
     const std::vector<std::string> VIRTUAL_KEYBOARD = {
         "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "=", "tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p",
         "shift", "a", "s", "d", "f", "g", "h", "j", "k", "l", "enter", "space", "ctrl", "z", "x", "c", "v", "b", "n", "m", "ctrl", "backspace"
@@ -118,7 +93,6 @@ int main()
     std::string copiedString = "";
     std::vector<std::string> actions;
 
-    std::cout << "\nPress a key: \n";
     while (true) {
         std::cout << "Enter a key or combination: ";
         std::getline(std::cin, key);
@@ -133,11 +107,11 @@ int main()
             str = str.substr(0, str.size() - 1);
         }
         else if (key == "undo settings") {
+            Otkat_action(actions[actions.size() - 1]);
             virtualKeyboard.setAction(actions.back(), actions.back());
             actions.pop_back();
         }
         else if (key == "settings") {
-            std::cout << "Reassign keys mode enabled: \n";
             std::cout << "Enter a key or combination: ";
             std::string reassignKey;
             std::getline(std::cin, reassignKey);
@@ -146,7 +120,6 @@ int main()
             std::string virtualKey;
             std::getline(std::cin, virtualKey);
             virtualKeyboard.setAction(reassignKey, virtualKey);
-            std::getline(std::cin, key);
             if (key == "continue") {
                 continue;
             }
