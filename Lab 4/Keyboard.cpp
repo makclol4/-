@@ -107,9 +107,13 @@ int main()
             str = str.substr(0, str.size() - 1);
         }
         else if (key == "undo settings") {
-            Otkat_action(actions[actions.size() - 1]);
-            virtualKeyboard.setAction(actions.back(), actions.back());
-            actions.pop_back();
+            if (Otkat_action(actions[actions.size() - 1])) {
+                virtualKeyboard.setAction(actions.back(), actions.back());
+                actions.pop_back();
+            }
+            else {
+                std::cout << "Error undo action!";
+            }
         }
         else if (key == "settings") {
             std::cout << "Enter a key or combination: ";
